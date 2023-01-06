@@ -35,15 +35,8 @@ void billing(int rate,int qty)
 {
 	int stot;
 	stot=rate*qty;
- //	printf("Sub Total : %d\n",stot);
 	gtot=gtot+stot;
-  //   bill(qty);
-  //   note(gtot);
 }
-
-
-
-
   void bill()
 {
 	int count=1;
@@ -59,14 +52,9 @@ void billing(int rate,int qty)
 	printf("\n________________________________________________________________________________");
 	printf("\n                                                              Grand Total:%d/-",gtot);
 	}
-	
-
-
 void note(gtot)
 {
 	int a=0;
-   //printf("Enter your cash:");
-   //scanf("%d",&cash);
     a=gtot/2000;
     gtot=gtot%2000;
      if(a!=0)
@@ -82,17 +70,14 @@ void note(gtot)
     a=gtot/100;
     gtot=gtot%100;
      if(a!=0)
-     
     printf("\n%d notes of 100",-1*a);
     a=gtot/50;
     gtot=gtot%50;
      if(a!=0)
-     
     printf("\n%d notes of 50",-1*a);
     a=gtot/20;
     gtot=gtot%20;
      if(a!=0)
-     
     printf("\n%d notes of 20",-1*a);
     a=gtot/10;
     gtot=gtot%10;
@@ -117,61 +102,56 @@ void printbill()
 	printf("\nGrandTotal %d",gtot);
 	while(lp)
 	{
-			printf("\nEnter Your Cash : ");
-			scanf("%d",&cash);
-			gtot=gtot-cash;
-			if(gtot==0)
-			{
-				//note(gtot);
-				printf("\nT H A N K  Y O U!!");
-				lp=0;
-			}
-			if(gtot<0)
-			{
-				printf("\nReturn : %d\n",gtot*-1);
-				note(gtot);
-				printf("\nT H A N K  Y O U!!!");
-				lp=0;
-			}
-			if(gtot>0)
-			{
-				printf("\n%d rs more\n",gtot);
-			}
-	}
+printf("\nEnter Your Cash : ");
+scanf("%d",&cash);
+gtot=gtot-cash;
+if(gtot==0)
+{
+printf("\nT H A N K  Y O U!!");
+lp=0;
+}
+if(gtot<0)
+{
+printf("\nReturn : %d\n",gtot*-1);
+note(gtot);
+printf("\nT H A N K  Y O U!!!");
+lp=0;
+}
+if(gtot>0)
+{
+printf("\n%d rs more\n",gtot);
+}
+}
 }
 
 int main()
 {
-	int ch,lp=1,a=0;
-	printf("Welcome To Hotel\n");
-	while(lp)
-	{
-		ch=menu();
-		switch(ch)
-		{
-			case 1:
-			order (ch,20);
-				break;
-				case 2:
-				order (ch,30);
-				break;
-				case 3:
-				order (ch,10);
-				break;
-				case 0:
-				lp=0;
-				bill();
-				printbill();
-				
-			//a=
-			//bill(rate,qty,stot);
-			//printf("%d",a);
-				break;
-				default:
-					printf("Wrong input!\n");
-					break;
-		}
-	}
+int ch,lp=1,a=0;
+printf("Welcome To Hotel\n");
+while(lp)
+{
+ch=menu();
+switch(ch)
+{
+case 1:
+order (ch,20);
+break;
+case 2:
+order (ch,30);
+break;
+case 3:
+order (ch,10);
+break;
+case 0:
+lp=0;
+bill();
+printbill();
+break;
+default:
+printf("Wrong input!\n");
+break;
+}
+}
 }
 
 
