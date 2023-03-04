@@ -36,7 +36,7 @@ void order(int ch,int rate)
 	if(ch==2)
 	dqty=dqty+qty;
 	if(ch==3)
-	tqty=tqty+10;
+	tqty=tqty+qty;
 }
 
   void bill()
@@ -50,9 +50,9 @@ void order(int ch,int rate)
 	if(dqty!=0)
 	printf("\n %d    |   dosa\t|  %d\t |   30    |    %d   | ",count++,dqty,dqty*30);
 	if(tqty!=0) 
-	printf("\n %d    |     Tea\t|  %d\t |   10    |    %d  |",count++,tqty,tqty*10);
+	printf("\n %d    |     Tea\t|  %d\t |   10    |    %d   |",count++,tqty,tqty*10);
 	printf("\n________________________________________________________________________________");
-	printf("\n                                                              Grand Total:%d/-",gtot);
+	printf("\n                                        Grand Total:%d/-",gtot);
 	}
 void note(gtot)
 {
