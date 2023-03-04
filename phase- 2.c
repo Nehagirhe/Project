@@ -14,6 +14,13 @@ int menu()
 	return ch;
 }
 
+void billing(int rate,int qty)
+{
+	int stot;
+	stot=rate*qty;
+	gtot=gtot+stot;
+}
+
 void order(int ch,int rate)
 {
 	int qty;
@@ -31,12 +38,7 @@ void order(int ch,int rate)
 	if(ch==3)
 	tqty=tqty+10;
 }
-void billing(int rate,int qty)
-{
-	int stot;
-	stot=rate*qty;
-	gtot=gtot+stot;
-}
+
   void bill()
 {
 	int count=1;
