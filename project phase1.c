@@ -3,6 +3,7 @@
 int main()
 	
 {
+	
 int ch,pl,lp,stot=0,gtot=0;	
 printf("Welcome To Hotel");
 while(lp)
