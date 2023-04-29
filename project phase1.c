@@ -37,6 +37,7 @@ case 2:
 	printf("\nEnter Number Of Plates: ");
 	scanf("%d",&pl);
 	stot=10*pl;
+
 	printf("SubTotal=%d",stot);
 	gtot=gtot+stot;
 	
